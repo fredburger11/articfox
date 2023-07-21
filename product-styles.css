@@ -1,0 +1,64 @@
+/* Styles specific to products.html */
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.product {
+  width: calc(33.33% - 20px);
+  height: 280px; /* Set a fixed height for the product container */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* Add padding around the product container */
+  padding-bottom: 60px;
+}
+
+.product a {
+  text-decoration: none; /* Remove underline for the link */
+  color: black;
+}
+
+.product a:hover {
+  text-decoration: underline; /* Show underline when hovering over the link */
+}
+
+.product h3 {
+  color: black; /* Set the font color to black */
+}
+
+.product p {
+  font-weight: bold; /* Set the text inside <p> elements to be bold */
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  border-radius: 5px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+/* Responsive styles for products.html */
+@media only screen and (max-width: 768px) {
+  .product {
+    flex: 1 0 calc(50% - 10px); /* Adjust the width to 50% on small screens */
+  }
+
+  .product img {
+    height: 180px; /* Adjust the image height for better scaling on mobiles */
+  }
+
+  .product h3 {
+    font-size: 16px; /* Adjust the font size of product names for mobiles */
+  }
+
+  .product p {
+    font-size: 14px; /* Adjust the font size of descriptions for mobiles */
+  }
+}
+
