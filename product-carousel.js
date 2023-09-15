@@ -10,4 +10,18 @@ $(document).ready(function () {
       autoplaySpeed: 3000, // Autoplay interval in milliseconds
     });
   });
+
+  $('.product-images').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 2, // Number of slides to show on mobile
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
   
