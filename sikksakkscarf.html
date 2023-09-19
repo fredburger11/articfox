@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Name - Arctic Fox Iceland</title>
   <link rel="stylesheet" href="styles.css"> 
-  <link rel="stylesheet" href="product-styles.css">  <link rel="stylesheet" href="slick/slick.css"> <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" href="slick/slick-theme.css"> <!-- Slick Carousel Theme CSS -->
+  <link rel="stylesheet" href="product-styles.css">  <!-- Your other CSS files -->
   <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
@@ -26,25 +25,27 @@
   </header>
 
   <main>
-    <div class="background-container"></div>
-      <div class="product-container">
-        <div class="product-images">
-          <div><img src="sikksakkscarf/sikksakkscarf1.jpg" alt="Product 1"></div>
+    <div class="product-container">
+      <div class="product-images">
+        <div class="image" onclick="openOverlay('sikksakkscarf/sikksakkscarf1.jpg')"><img src="sikksakkscarf/sikksakkscarf1.jpg" alt="Product 1"></div>
 
-          <!-- Add more images for the product -->
-        </div>
-        <div class="product-details">
-          <h2>Sikk Sakk scarf</h2>
+        <!-- Add more images for the product -->
+      </div>
+      <div class="product-details">
+        <h2>Sikk Sakk scarf</h2>
           <p>Stylish black and white scarf</p>
           <p>100% Merino wool</p>
           <p>Length 195 cm width 25 cm</p>
           <p>Made in Iceland</p>
-          
-          <!-- ... Product details ... -->
-        </div>
+        <!-- ... Product details ... -->
       </div>
     </div>
   </main>
+
+  <div id="image-overlay" class="overlay">
+    <span class="close" onclick="closeOverlay()">&times;</span>
+    <img id="enlarged-image" class="enlarged-image" src="" alt="Enlarged Image">
+  </div>
 
   <footer>
     <p>&copy; 2023 Arctic Fox Iceland. All rights reserved.</p>
@@ -58,8 +59,6 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="slick/slick.min.js"></script> <!-- Slick Carousel JS -->
-  <script src="product-carousel.js"></script> <!-- Custom JS for the carousel -->
+  <script src="product-overlay.js"></script>
 </body>
 </html>

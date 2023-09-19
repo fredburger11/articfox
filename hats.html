@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Name - Arctic Fox Iceland</title>
   <link rel="stylesheet" href="styles.css"> 
-  <link rel="stylesheet" href="product-styles.css">  <link rel="stylesheet" href="slick/slick.css"> <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" href="slick/slick-theme.css"> <!-- Slick Carousel Theme CSS -->
+  <link rel="stylesheet" href="product-styles.css">  <!-- Your other CSS files -->
   <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
@@ -26,26 +25,30 @@
   </header>
 
   <main>
-    <div class="background-container"></div>
-      <div class="product-container">
-        <div class="product-images">
-          <div><img src="hats/hats1.jpg" alt="Product 1"></div>
-          <div><img src="hats/hats2.jpg" alt="Product 1-2"></div>
-          <div><img src="hats/hats3.jpg" alt="Product 1-3"></div>
-          <div><img src="hats/hats4.jpg" alt="Product 1-4"></div>
-          <div><img src="hats/hats5.jpg" alt="Product 1-5"></div>
-          <!-- Add more images for the product -->
-        </div>
-        <div class="product-details">
-          <h2>Lambswool hats</h2>
-          <p>2 X 2 rib hat soft and bulky made from lambswool.</p>
-          <p>Made in Iceland</p>
-          <p>Available in white, black, blue and gray</p>
-          <!-- ... Product details ... -->
-        </div>
+    <div class="product-container">
+      <div class="product-images">
+        <div class="image" onclick="openOverlay('hats/hats1.jpg')"><img src="hats/hats1.jpg" alt="Product 1"></div>
+        <div class="image" onclick="openOverlay('hats/hats2.jpg')"><img src="hats/hats2.jpg" alt="Product 2"></div>
+        <div class="image" onclick="openOverlay('hats/hats3.jpg')"><img src="hats/hats3.jpg" alt="Product 3"></div>
+        <div class="image" onclick="openOverlay('hats/hats4.jpg')"><img src="hats/hats4.jpg" alt="Product 4"></div>
+        <div class="image" onclick="openOverlay('hats/hats5.jpg')"><img src="hats/hats5.jpg" alt="Product 5"></div>
+        <!-- Add more images for the product -->
+      </div>
+      <div class="product-details">
+        <h2>Dögg Merino scarf</h2>
+        <p>Ultra soft and bulky scarf with stylish traditional pattern</p>
+        <p>100% Merino wool</p>
+        <p>Made in Iceland</p>
+        <p>Available in white, black, blue, and light blue</p>
+        <!-- ... Product details ... -->
       </div>
     </div>
   </main>
+
+  <div id="image-overlay" class="overlay">
+    <span class="close" onclick="closeOverlay()">&times;</span>
+    <img id="enlarged-image" class="enlarged-image" src="" alt="Enlarged Image">
+  </div>
 
   <footer>
     <p>&copy; 2023 Arctic Fox Iceland. All rights reserved.</p>
@@ -59,8 +62,6 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="slick/slick.min.js"></script> <!-- Slick Carousel JS -->
-  <script src="product-carousel.js"></script> <!-- Custom JS for the carousel -->
+  <script src="product-overlay.js"></script>
 </body>
 </html>
